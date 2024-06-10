@@ -1,0 +1,23 @@
+:root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  color: #FEFAF6;
+  background-color: #0b1c35;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pageContainer {
+  color-scheme: light dark;
+  color: #f6f6f5;
+  background: linear-gradient(0.15turn, #15191e, #121518);
+}
