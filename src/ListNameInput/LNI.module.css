@@ -1,0 +1,47 @@
+.cardHolder {
+    width: 75%;
+    margin-top: 10%;
+}
+
+.inputCard {
+    background-color: #0b1c35;
+    border: none;
+    border-style: none;
+}
+
+.cardTitle {
+    color: #FEFAF6;
+}
+
+.inputBox {
+    background-color: transparent;
+}
+
+.inputLine {
+    background-color: transparent;
+
+    border: none;
+    border-bottom: 0.09rem solid #FEFAF6;
+
+    color: #FEFAF6;
+    width: 100%;
+
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.submitBtn {
+    margin-top: 5%;
+    padding: 2% 5% 2% 5%;
+
+    background-color: #1e365b;
+    color: #FEFAF6;
+
+    box-shadow: none;
+    border: none;
+    border-radius: 10%;
+
+}
