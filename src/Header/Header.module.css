@@ -1,0 +1,35 @@
+/* Module Classes
+    -The classes that are implemented via this module and not from any other framework, e.g. Bootstrap */
+.navComp {
+    height: 100vh;
+    width: fit-content;
+    /* border-right: #fefaf648 1px solid; */
+
+    * {
+        color: #FEFAF6;
+    }
+
+    *:hover {
+        color: #FEFAF6;
+    }
+
+}
+
+.navBarLogo {
+    justify-self: center;
+    height: 5vh;
+}
+
+
+.titleRow {
+    padding: none;
+    width: fit-content;
+}
+
+
+.navLink {
+    color: #FEFAF6;
+    width: fit-content;
+    padding-right: none;
+    margin-right: 0;
+}
