@@ -1,0 +1,5 @@
+/* DOM classes
+    - The classes that affect elements changed directly in the DOM */
+.nav-link.active {
+    color: #FEFAF6;
+}
