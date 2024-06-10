@@ -1,8 +1,7 @@
-# React + Vite
+# DayBy Planner App by Rohan Talagadadeevi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A planner app that takes care of the planning and lets you live life day By day
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+***
+More Information Soon
+***
