@@ -1,0 +1,48 @@
+.badge1 {
+    background-color: #33FF00 !important;
+}
+
+.badge2 {
+    background-color: #66FF00 !important;
+}
+
+.badge3 {
+    background-color: #99FF00 !important;
+}
+
+.badge4 {
+    background-color: #CCFF00 !important;
+}
+
+.badge5 {
+    background-color: #FFFF00 !important;
+}
+
+.badge6 {
+    background-color: #FFCC00 !important;
+}
+
+.badge7 {
+    background-color: #FF9900 !important;
+}
+
+.badge8 {
+    background-color: #FF6600 !important;
+}
+
+.badge9 {
+    background-color: #FF3300 !important;
+}
+
+.badge10 {
+    background-color: #FF0000 !important;
+}
+
+.taskCard {
+    background: linear-gradient(0.15turn, #5b6c81, #6290be);
+    color: #f6f6f5;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 5%
+}

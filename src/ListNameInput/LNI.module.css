@@ -34,7 +34,8 @@ input:focus {
 }
 
 .submitBtn {
-    margin-top: 5%;
+    margin-top: 1%;
+    margin-left: 5%;
     padding: 2% 5% 2% 5%;
 
     background-color: #1e365b;
@@ -44,4 +45,9 @@ input:focus {
     border: none;
     border-radius: 10%;
 
+}
+
+.formContainer {
+    margin-top: 1%;
+    padding: 5%;
 }

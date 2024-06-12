@@ -1,0 +1,98 @@
+.btnScale {
+    min-width: 50px;
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+.btnScale:focus {
+    border: white 3px solid;
+    min-width: 50px;
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+.btnScaleAsc1 {
+    background-color: #33FF00;
+}
+
+.btnScaleAsc1:hover {
+    background-color: #2CDE00;
+}
+
+.btnScaleAsc2 {
+    background-color: #66FF00;
+}
+
+.btnScaleAsc2:hover {
+    background-color: #59DE00;
+}
+
+.btnScaleAsc3 {
+    background-color: #99FF00;
+}
+
+.btnScaleAsc3:hover {
+    background-color: #85DE00;
+}
+
+.btnScaleAsc4 {
+    background-color: #CCFF00;
+}
+
+.btnScaleAsc4:hover {
+    background-color: #B1DE00;
+}
+
+.btnScaleAsc5 {
+    background-color: #FFFF00;
+}
+
+.btnScaleAsc5:hover {
+    background-color: #DEDE00;
+}
+
+.btnScaleAsc6 {
+    background-color: #FFCC00;
+}
+
+.btnScaleAsc6:hover {
+    background-color: #DEB100;
+}
+
+.btnScaleAsc7 {
+    background-color: #FF9900;
+}
+
+.btnScaleAsc7:hover {
+    background-color: #DE8500;
+}
+
+.btnScaleAsc8 {
+    background-color: #FF6600;
+}
+
+.btnScaleAsc8:hover {
+    background-color: #DE5900;
+}
+
+.btnScaleAsc9 {
+    background-color: #FF3300;
+}
+
+.btnScaleAsc9:hover {
+    background-color: #DE2C00;
+}
+
+.btnScaleAsc10 {
+    background-color: #FF0000;
+}
+
+.btnScaleAsc10:hover {
+    background-color: #DE0000;
+}
