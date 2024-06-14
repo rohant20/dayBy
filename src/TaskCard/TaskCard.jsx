@@ -13,8 +13,9 @@ export default function TaskCard(props) {
         <ListGroup.Item as="li" className={styles.taskCard}>
             <div className="ms-2 me-auto">
                 <div className="fw-bold">{props.TaskTitle}</div>
+                <div className="fw-bold">{`${props.TaskTime} mins`}</div>
             </div>
-            <Badge className={`${styles[badgeClass]}`} pill>
+            <Badge className={styles[badgeClass]} pill>
                 {props.TaskPrio}
             </Badge>
         </ListGroup.Item>
@@ -24,5 +25,6 @@ export default function TaskCard(props) {
 
 TaskCard.PropTypes = {
     TaskTitle: PropTypes.string,
-    TaskPrio: PropTypes.number
+    TaskPrio: PropTypes.number,
+    TaskTime: PropTypes.number
 }

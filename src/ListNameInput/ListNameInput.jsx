@@ -9,13 +9,17 @@ import TaskCard from "../TaskCard/TaskCard.jsx";
 import styles from "./LNI.module.css";
 
 export default function ListNameInput() {
+    //Constants
     const currDate = new Date();
     const [cardProps, setProps] = useState([]);
 
+    //Ref Values
     let taskNameRef = useRef("");
     let taskPrioRef = useRef(0);
     let taskKey = useRef(0);
+    let taskTimeRef = useRef(0);
 
+    //Handler Functions
     function handleTaskName(e) {
         taskNameRef.current = e.target.value;
     }
@@ -24,6 +28,13 @@ export default function ListNameInput() {
         taskPrioRef.current = Number(e.target.innerHTML);
     }
 
+    function handleTaskTime(e) {
+        taskTimeRef.current = Number(e.target.value);
+    }
+
+    //Sync Functions
+    // -  Form Reset
+    // -  Task Card Creation
     function resetPropVals() {
         taskNameRef.current = "";
         taskPrioRef.current = 0;
@@ -35,7 +46,8 @@ export default function ListNameInput() {
         let newProps = {
             id: taskKey.current,
             TaskTitle: taskNameRef.current,
-            TaskPrio: taskPrioRef.current
+            TaskPrio: taskPrioRef.current,
+            TaskTime: taskTimeRef.current
         };
         console.log(newProps.TaskPrio);
 
@@ -58,22 +70,26 @@ export default function ListNameInput() {
                     <h1 className={styles.cardTitle}>{`${currDate.getMonth()}/${currDate.getDay()}'s List`}</h1>
                 </Card.Title>
                 <ListGroup id="taskList" as="ul">
-                    {cardProps.map((cp) => <TaskCard key={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} />)}
+                    {cardProps.map((cp) => <TaskCard key={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} TaskTime={cp.TaskTime} />)}
                 </ListGroup>
 
                 <form className={styles.inputBox} onSubmit={taskCardCreation}>
                     <input className={styles.inputLine} type="text" name="Task" onChange={handleTaskName} />
+                    <input className={styles.timeInput} type="text" name="Task" onChange={handleTaskTime} />
                     <div className={styles.formContainer}>
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="1" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="2" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="3" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="4" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="5" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="6" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="7" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="8" />
-                        <PrioBTN clickFunc={handleTaskPrio} btnLabel="9" />
+                        <div className={styles.prioContainer}>
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="1" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="2" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="3" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="4" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="5" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="6" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="7" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="8" />
+                            <PrioBTN clickFunc={handleTaskPrio} btnLabel="9" />
+                        </div>
                         <input className={styles.submitBtn} type="submit" />
+                        <input className={styles.submitBtn} type='button' value="Generate List" />
                     </div>
                 </form>
             </Card.Body>

@@ -19,13 +19,29 @@
 
 .inputLine {
     background-color: transparent;
-
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     border: none;
     border-bottom: 0.09rem solid #FEFAF6;
 
     color: #FEFAF6;
-    width: 100%;
+    width: 70%;
 
+}
+
+.timeInput {
+    background-color: transparent;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    border-bottom: 0.09rem solid #FEFAF6;
+
+    color: #FEFAF6;
+    width: 10%;
 }
 
 textarea:focus,
@@ -34,8 +50,7 @@ input:focus {
 }
 
 .submitBtn {
-    margin-top: 1%;
-    margin-left: 5%;
+    margin-top: 5%;
     padding: 2% 5% 2% 5%;
 
     background-color: #1e365b;
@@ -45,6 +60,12 @@ input:focus {
     border: none;
     border-radius: 10%;
 
+    margin-left: 20%;
+}
+
+.prioContainer {
+    margin-left: 9%;
+    margin-right: auto;
 }
 
 .formContainer {
