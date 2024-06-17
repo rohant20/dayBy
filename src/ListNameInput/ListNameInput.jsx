@@ -18,6 +18,7 @@ export default function ListNameInput() {
     let taskPrioRef = useRef(0);
     let taskKey = useRef(0);
     let taskTimeRef = useRef(0);
+    let dependentTasks = useRef([]);
 
     //Handler Functions
     function handleTaskName(e) {
@@ -32,12 +33,21 @@ export default function ListNameInput() {
         taskTimeRef.current = Number(e.target.value);
     }
 
+    function handleTaskDepend(id) {
+        if (!(dependentTasks.current.includes(id))) {
+            dependentTasks.current.push(id);
+        }
+        console.log(dependentTasks.current);
+    }
+
     //Sync Functions
     // -  Form Reset
     // -  Task Card Creation
     function resetPropVals() {
         taskNameRef.current = "";
         taskPrioRef.current = 0;
+        taskTimeRef.current = 0;
+        dependentTasks.current = [];
     }
 
     function taskCardCreation(e) {
@@ -47,16 +57,16 @@ export default function ListNameInput() {
             id: taskKey.current,
             TaskTitle: taskNameRef.current,
             TaskPrio: taskPrioRef.current,
-            TaskTime: taskTimeRef.current
+            TaskTime: taskTimeRef.current,
+            DependentTasks: dependentTasks.current
         };
-        console.log(newProps.TaskPrio);
 
-        if (newProps.TaskTitle == "" || newProps.TaskPrio == 0) {
+        if (newProps.TaskTitle == "" || newProps.TaskPrio == 0 || newProps.TaskTime == 0) {
             return;
         }
 
         taskKey.current++;
-        console.log(newProps.id + " " + taskKey.current);
+        console.log(newProps);
         setProps(cp => [...cp, newProps]);
         resetPropVals();
         e.target.reset();
@@ -70,7 +80,7 @@ export default function ListNameInput() {
                     <h1 className={styles.cardTitle}>{`${currDate.getMonth()}/${currDate.getDay()}'s List`}</h1>
                 </Card.Title>
                 <ListGroup id="taskList" as="ul">
-                    {cardProps.map((cp) => <TaskCard key={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} TaskTime={cp.TaskTime} />)}
+                    {cardProps.map((cp) => <TaskCard key={cp.id} CardId={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} TaskTime={cp.TaskTime} OnClickFunc={handleTaskDepend} />)}
                 </ListGroup>
 
                 <form className={styles.inputBox} onSubmit={taskCardCreation}>

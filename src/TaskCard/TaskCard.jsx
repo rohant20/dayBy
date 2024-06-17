@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export default function TaskCard(props) {
     const badgeClass = "badge" + props.TaskPrio;
-    console.log(props.TaskTitle + " " + props.TaskPrio + " " + props.key);
+    console.log(props.TaskTitle + " " + props.TaskPrio);
 
     return (
 
@@ -14,10 +14,13 @@ export default function TaskCard(props) {
             <div className="ms-2 me-auto">
                 <div className="fw-bold">{props.TaskTitle}</div>
                 <div className="fw-bold">{`${props.TaskTime} mins`}</div>
+                <Badge className={styles[badgeClass]} pill>
+                    {props.TaskPrio}
+                </Badge>
             </div>
-            <Badge className={styles[badgeClass]} pill>
-                {props.TaskPrio}
-            </Badge>
+            <button onClick={() => props.OnClickFunc(props.CardId)} className={styles.addDependBTN}>
+                +
+            </button>
         </ListGroup.Item>
 
     );
@@ -26,5 +29,7 @@ export default function TaskCard(props) {
 TaskCard.PropTypes = {
     TaskTitle: PropTypes.string,
     TaskPrio: PropTypes.number,
-    TaskTime: PropTypes.number
+    TaskTime: PropTypes.number,
+    CardId: PropTypes.number,
+    OnClickFunc: PropTypes.func
 }
