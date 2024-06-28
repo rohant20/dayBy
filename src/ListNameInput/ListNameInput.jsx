@@ -20,6 +20,7 @@ export default function ListNameInput() {
     let taskTimeRef = useRef(0);
     let dependentTasks = useRef([]);
 
+
     //Handler Functions
     function handleTaskName(e) {
         taskNameRef.current = e.target.value;
@@ -80,7 +81,9 @@ export default function ListNameInput() {
                     <h1 className={styles.cardTitle}>{`${currDate.getMonth()}/${currDate.getDay()}'s List`}</h1>
                 </Card.Title>
                 <ListGroup id="taskList" as="ul">
-                    {cardProps.map((cp) => <TaskCard key={cp.id} CardId={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} TaskTime={cp.TaskTime} OnClickFunc={handleTaskDepend} />)}
+                    {cardProps.map((cp) =>
+                        <TaskCard key={cp.id} CardId={cp.id} TaskTitle={cp.TaskTitle} TaskPrio={cp.TaskPrio} TaskTime={cp.TaskTime} OnClickFunc={handleTaskDepend} />)
+                    }
                 </ListGroup>
 
                 <form className={styles.inputBox} onSubmit={taskCardCreation}>

@@ -1,0 +1,43 @@
+.formText {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.formContainer {
+    display: block;
+    margin-left: 22%;
+    margin-top: 10%;
+    width: 40%;
+}
+
+.formContent {
+    background-color: #0b1c35;
+    border-radius: 5%;
+    padding: 5%;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.inputBox {
+    background-color: #FEFAF6;
+    border-radius: 8%;
+    padding: 3%;
+    margin-top: 2%;
+    margin-right: 2%;
+    color: #0b1c35;
+    font-weight: bold;
+}
+
+.Label {
+    font-size: 1.25rem;
+    font-weight: 100;
+    font-style: oblique;
+}
+
+.controlGroup {
+    display: flex;
+}

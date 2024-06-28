@@ -18,6 +18,16 @@ const router = createBrowserRouter([
     path: "/list",
     element: <App pageId={1} />,
     errorElement: <h1>Not Found MF 404</h1>
+  },
+  {
+    path: "/signup",
+    element: <App pageId={2} />,
+    errorElement: <h1>Not Found MF 404</h1>
+  },
+  {
+    path: "/login",
+    element: <App pageId={3} />,
+    errorElement: <h1>Not Found MF 404</h1>
   }
 ]);
 

@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 export default function TaskCard(props) {
     const badgeClass = "badge" + props.TaskPrio;
-    console.log(props.TaskTitle + " " + props.TaskPrio);
 
     return (
 
